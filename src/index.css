@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-responsive {
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .bg-responsive {
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-responsive {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes gradientBlur {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientBlur {
+  background-size: 400% 400%;
+  animation: gradientBlur 15s ease infinite;
+}
